@@ -31,7 +31,7 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- registration css link -->
-    <link rel="stylesheet" href="registrationForm.css">
+    <link rel="stylesheet" href="css/registrationForm.css">
 </head>
 <body>
     <header>
@@ -67,58 +67,58 @@
     <section class="regForm">
         <form action="">
             <!-- --------NAME-------- -->
-            <label for="name">Fullname:</label><br>
+            <label for="name">Fullname: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="text" id="fullName" placeholder="Enter your name"><br><br>
 
             <!-- --------DATE OF BIRTH-------- -->
-            <label for="DOB">Date Of Birth:</label><br>
+            <label for="DOB">Date Of Birth: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="date" id="DB" placeholder="Enter your Date of Birth"><br><br>
 
             <!-- --------MOBILE NUMBER-------- -->
-            <label for="mobileNumber">Mobile Number:</label><br>
+            <label for="mobileNumber">Mobile Number: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="number" id="mobile" placeholder="Enter your Mobile Number"><br><br>
 
              <!-- --------FATHER INFO-------- -->
-            <label for="FatherName">Father's Name:</label><br>
+            <label for="FatherName">Father's Name: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="text" id="fatherName" placeholder="Enter your father's name"><br><br>
 
-            <label for="FatherMobile">Father's Mobile Number:</label><br>
+            <label for="FatherMobile">Father's Mobile Number: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="number" id="fatherMobile" placeholder="Enter your father's mobile number"><br><br>
 
              <!-- --------MOTHER INFO-------- -->
-            <label for="MotherName">Mother's Name:</label><br>
+            <label for="MotherName">Mother's Name: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="text" id="motherName" placeholder="Enter your mother's name"><br><br>
 
-            <label for="MotherNumber">Mother's Mobile Number:</label><br>
+            <label for="MotherNumber">Mother's Mobile Number: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="number" id="motherMobile" placeholder="Enter your mother's mobile number"><br><br>
 
              <!-- --------ADDRESS-------- -->
-            <label for="name">Address:</label><br>
+            <label for="name">Address: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="text" id="address" placeholder="Enter your address"><br><br>
 
-             <!-- --------EMAIL-------- -->
-            <label for="address">Email Address: <span class="emailSpan">(without '.com')</span></label><br>
-            <input type="text" id="email" placeholder="example@gmail">
+             <!-- --------Email-------- -->
+            <label for="address">Email: <span style="color: red; font-size: 2rem;">*</span></label><br>
+            <input type="text" id="email" placeholder="Enter our email address">
             <span class="tooltip">
                 <i class="fas fa-exclamation-triangle"></i><br>
                 <span class="tooltip-text">
-                   <p> Don't use '.com' in this email input box. This is a security purpose. Enter your email address like "example@gmail"</p>
+                   <p> Enter your email perfectly. Because,you will registered by this email address 💕</p>
                 </span>
             </span><br><br>
 
             <!-- --------Facebook ID Link-------- -->
-            <label for="name">Facebook ID Link:</label><br>
+            <label for="name">Facebook ID Link: <span style="color: red; font-size: 2rem;">*</span></label><br>
             <input type="text" id="FIL" placeholder="Enter your facebook id link"><br><br>
 
              <!-- --------GENDER-------- -->
-            <label for="gender">Gender:</label>
+            <label for="gender">Gender: <span style="color: red; font-size: 2rem;">*</span></label>
             <select name="" id="gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select><br><br>
 
             <!-- --------SUBJECT-------- -->
-            <label for="subject">Subject:</label>
+            <label for="subject">Subject: <span style="color: red; font-size: 2rem;">*</span></label>
             <select name="" id="subject">
                 <option value="No Subject Choosen">No Subject Choosen</option>
                 <option value="Web Development">Web Development</option>
@@ -269,7 +269,7 @@
 //--------------------INSERT DATA FUNCTION------------------//
 
 function InsertData(){
-            set(ref(db, "RegisteredMembers/"+fullName.value+"       "+email.value),{
+            set(ref(db, "RegisteredMembers/"+fullName.value),{
                 Name: fullName.value,
                 DateOfBirth: dateOfBirth.value,
                 MobileNumber: mobileNumber,
